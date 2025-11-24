@@ -1,0 +1,265 @@
+/*Utilizamos "html" para el desplazamiento del archivo completo*/
+html {
+        scroll-behavior:smooth;
+        background-color: white;
+    }
+
+    header{
+        position: sticky;
+        top: 0cm;
+        z-index: 3;
+    }
+
+    .Introduccion {
+        z-index: 20;
+        background-color: #2c786c;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .Introduccion h1 {
+        text-align: center;
+        font-size: 50px;
+        margin-top: auto;
+    }
+
+    .Introduccion nav {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: auto;
+    }
+
+    .Intro{
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .Intro p:hover{
+        color: midnightblue;
+        transform: scale(1.1);  /*se utiliza para que los elementos aumenten su tamaño cuando pasas el cursor por encima*/
+    }
+
+    .navegador a {
+        color: white;
+        text-decoration: none;
+        transition: transform 0.3s; /*la opción transforma nos da la escala, mientras que el tiempo es el que tomará la imagen para crecer y decrecer*/
+    }
+
+    .navegador a:hover {
+        color: #5ec2aa;
+        transform: scale(1.1);
+    }
+
+
+
+    #SobreMi {
+        background-color: #ffffff;
+        font-size: 25px;
+        margin-bottom: 150px; /*Lo utilizo para separar las distinas secciones*/
+    }
+
+    .imagen img {
+        display: flex;
+        width: 500px;
+        height: auto;
+        border-radius: 10px;
+    }
+    
+    .imagen{
+        display: flex;
+        float: right;
+        margin-top: 60px;
+        padding: 20px;       
+        background-color: #f0f0f0;
+        border: 5px solid #a8dadc;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    #SobreMi p {
+        margin: 40px;
+        margin-right: 600px;
+        text-align: left;
+        font-size: 30px;
+        font-style: normal;
+    }
+
+    #SobreMi h2 {
+        text-decoration: underline;
+    }
+
+    #SobreMi a{
+        color: black;
+        text-decoration: none;
+    }
+
+    #SobreMi a:hover{
+        color: rgb(34, 207, 207);
+    }
+
+    #Aficiones {
+        letter-spacing: 1px;
+        font-size: 25px;
+        position: relative;
+        margin-bottom: 150px;
+    }
+
+    #Aficiones p {
+        position: relative;
+        font-size: 30px;
+        margin-right: 100px;
+        margin-left: 20px;
+    }
+
+    #Aficiones::before {
+        content: ""; /*Para modificar le pseudo-elemento*/
+        position: absolute;
+        inset: 0;    /*propiedad para ajustar los márgenes (espaciado) de la imagen*/
+        background-image: url(../Imágenes/Aficiones.jpg);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 1600px;
+        opacity: 0.3; /*lo uso para poner la foto más transparente y que permita ver el texto encima*/
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    #Aficiones h2 {
+        text-decoration: underline;
+    }
+
+
+
+
+    #Habilidades {
+        font-size: 25px;
+        margin-bottom: 150px;
+    }
+
+    #Habilidades h2 {
+        text-decoration: underline;
+    }
+
+    #Habilidades p {
+        font-size: 30px;
+    }
+
+    #Habilidades li:hover {
+        color: white;
+        transition: transform 0.3s;
+    }
+
+    #listas {
+        display: flex;           
+        gap: 30px;   /*para dar espaciado a los elementos hijos*/            
+        list-style: none;        
+        padding-left: 0;
+    }
+
+    #listas > li {
+        flex: 1 1 0;         /*forma corta d epoenr las 3 propiedades de flex (flex-grow, flex-shrink y flex-basis)*/   
+        margin-bottom: 20px;     
+        max-width: 50%;   /*Es el espacio máximo que puede ocupar la lista*/      
+    }
+
+    #listas h3 {
+        margin-bottom: 8px;      
+    }
+
+    #listas li ul {
+        list-style: disc;        
+        padding-left: 20px;
+    }
+
+    #listas li ul li {
+        margin-bottom: 6px;   
+    }
+
+    #listas > li:nth-child(odd) {
+        background-color: #27a491;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    #listas > li:nth-child(even) {
+        background-color: #6db3b5;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+
+
+    #Contacto {
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+
+    #Contacto h2 {
+        background-color: rgb(160, 243, 215);
+        text-decoration: underline;
+    }
+
+    #Contacto h3 {
+        background-color: #a8dadc;
+        font-style: oblique;
+        text-decoration: solid black;
+    }
+
+    #Contacto p h3 {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .formulario{
+        width: 600px;
+        font-size: 25px;
+        background-color: rgb(173, 196, 197);
+    }
+
+    .redes {
+        display: flex;
+        flex-direction: column;
+        font-size: 25px;
+        z-index: 0;
+    }
+
+    .redes nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+
+    .insta img{
+        width: 40px;
+        padding: 50px;
+    }
+
+    .insta img:hover{
+        transform: scale(1.2);
+    }
+
+    .gmail img{
+        width: 40px;
+        padding: 50px;
+    }
+
+    .gmail img:hover{
+        transform: scale(1.2);
+    }
+
+    .telefono img{
+        width: 40px;
+        padding: 50px;
+    }
+
+    .telefono img:hover{
+        transform: scale(1.2);
+    }
